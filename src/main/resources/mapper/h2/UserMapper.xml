@@ -9,7 +9,8 @@
 		user_id
 		, password
 		, user_name
-		, birthday
+		,
+		birthday
 		, age
 		, gender
 		, department_id
@@ -17,13 +18,24 @@
 		)
 		values (
 		#{userId}
-		, #{password}
+		,
+		#{password}
 		, #{userName}
 		, #{birthday}
 		, #{age}
 		, #{gender}
-		, #{departmentId}
+		,
+		#{departmentId}
 		, #{role}
 		)
 	</insert>
+
+	<!-- ユーザー複数件取得 -->
+	<select id="findMany" resultType="MUser">
+		select
+		*
+		from
+		m_user
+	</select>
 </mapper>
+

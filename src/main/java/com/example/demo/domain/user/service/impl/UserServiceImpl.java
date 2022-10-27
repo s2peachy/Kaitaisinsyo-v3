@@ -1,5 +1,7 @@
 package com.example.demo.domain.user.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +21,12 @@ public class UserServiceImpl implements UserService {
 		user.setDepartmentId(1); //部署
 		user.setRole("ROLE_GENERAL"); //ロール
 		mapper.insertOne(user);
+	}
+	
+	/**ユーザー取得*/
+	@Override
+	public List<MUser> getUsers() {
+		return mapper.findMany();
 	}
 
 }
