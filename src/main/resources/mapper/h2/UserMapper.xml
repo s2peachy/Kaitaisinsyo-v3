@@ -49,6 +49,14 @@
 		*
 		from
 		m_user
+		<where>
+			<if test="userId != null">
+				user_id like '%' || #{userId} || '%'
+			</if>
+			<if test="userName != null">
+				and user_name like '%' || #{userName} || '%'
+			</if>
+		</where>
 	</select>
 
 	<!-- ユーザー1件検索 -->
@@ -68,7 +76,8 @@
 		m_user
 		set
 		password = #{password}
-		, user_name = #{userName}
+		, user_name =
+		#{userName}
 		where
 		user_id = #{userId}
 	</update>
