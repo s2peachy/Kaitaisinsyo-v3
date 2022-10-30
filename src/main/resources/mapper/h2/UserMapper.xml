@@ -49,8 +49,7 @@
 		)
 		values (
 		#{userId}
-		,
-		#{password}
+		, #{password}
 		, #{userName}
 		, #{birthday}
 		, #{age}
