@@ -111,7 +111,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
-		<!-- Thymeleaf拡張ライブラリ(セキュリティ) -->
+				<!-- Thymeleaf拡張ライブラリ(セキュリティ) -->
 		<dependency>
 			<groupId>org.thymeleaf.extras</groupId>
 			<artifactId>thymeleaf-extras-springsecurity5</artifactId>
