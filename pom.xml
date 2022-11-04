@@ -111,10 +111,23 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
-				<!-- Thymeleaf拡張ライブラリ(セキュリティ) -->
+		<!-- Thymeleaf拡張ライブラリ(セキュリティ) -->
 		<dependency>
 			<groupId>org.thymeleaf.extras</groupId>
 			<artifactId>thymeleaf-extras-springsecurity5</artifactId>
+		</dependency>
+		<!-- datatables -->
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>datatables</artifactId>
+			<version>1.10.21</version>
+		</dependency>
+		<!-- datatables-plugins -->
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>datatables-plugins</artifactId>
+			<version>1.10.21</version>
+			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
 
