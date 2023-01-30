@@ -48,6 +48,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			.antMatchers("/login").permitAll() //直リンクOK
 			.antMatchers("/user/signup").permitAll() //直リンクOK
 			.antMatchers("/user/signup/rest").permitAll() //直リンクOK
+			.antMatchers("/momohara").permitAll() //直リンクOK
 			.antMatchers("/admin").hasAuthority("ROLE_ADMIN") //権限制御
 			.anyRequest().authenticated(); //それ以外は直リンクNG
 		
