@@ -48,6 +48,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			.antMatchers("/login").permitAll() //直リンクOK
 			.antMatchers("/user/signup").permitAll() //直リンクOK
 			.antMatchers("/user/signup/rest").permitAll() //直リンクOK
+			.antMatchers("/momohara").permitAll() //直リンクOK
 			.antMatchers("/admin").hasAuthority("ROLE_ADMIN") //権限制御
 			.anyRequest().authenticated(); //それ以外は直リンクNG
 		
@@ -59,7 +60,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				.failureUrl("/login?error") //ログイン失敗時の遷移先
 				.usernameParameter("userId") //ログインページのユーザーID
 				.passwordParameter("password") //ログインページのパスワード
-				.defaultSuccessUrl("/user/list", true); //成功後の遷移先
+				.defaultSuccessUrl("/momohara", true); //成功後の遷移先
 		
 		//ログアウト処理
 		http
